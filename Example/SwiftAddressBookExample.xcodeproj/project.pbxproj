@@ -165,12 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70D124151A9C217100FC9E1C /* Build configuration list for PBXNativeTarget "SwiftAddressBookTests" */;
 			buildPhases = (
-				811A2F4CF324EF923EB6CC2F /* 📦 Check Pods Manifest.lock */,
+				811A2F4CF324EF923EB6CC2F /* [CP] Check Pods Manifest.lock */,
 				70D124091A9C217100FC9E1C /* Sources */,
 				70D1240A1A9C217100FC9E1C /* Frameworks */,
 				70D1240B1A9C217100FC9E1C /* Resources */,
-				06C66151B204EB6021EDF97C /* 📦 Embed Pods Frameworks */,
-				0D964A1480AD4627D6F8A794 /* 📦 Copy Pods Resources */,
+				06C66151B204EB6021EDF97C /* [CP] Embed Pods Frameworks */,
+				0D964A1480AD4627D6F8A794 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8550DDCC1A892055009B86D8 /* Build configuration list for PBXNativeTarget "SwiftAddressBookExample" */;
 			buildPhases = (
-				CE1033B9B16E497813370351 /* 📦 Check Pods Manifest.lock */,
+				CE1033B9B16E497813370351 /* [CP] Check Pods Manifest.lock */,
 				8550DDA91A892055009B86D8 /* Sources */,
 				8550DDAA1A892055009B86D8 /* Frameworks */,
 				8550DDAB1A892055009B86D8 /* Resources */,
-				6E79ACE9512CDB82890F1B97 /* 📦 Embed Pods Frameworks */,
-				9761DDC48E0439939B842612 /* 📦 Copy Pods Resources */,
+				6E79ACE9512CDB82890F1B97 /* [CP] Embed Pods Frameworks */,
+				9761DDC48E0439939B842612 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,10 +213,12 @@
 				TargetAttributes = {
 					70D1240C1A9C217100FC9E1C = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8550DDAC1A892055009B86D8;
 					};
 					8550DDAC1A892055009B86D8 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -260,14 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06C66151B204EB6021EDF97C /* 📦 Embed Pods Frameworks */ = {
+		06C66151B204EB6021EDF97C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,14 +277,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAddressBookTests/Pods-SwiftAddressBookTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0D964A1480AD4627D6F8A794 /* 📦 Copy Pods Resources */ = {
+		0D964A1480AD4627D6F8A794 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +292,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAddressBookTests/Pods-SwiftAddressBookTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6E79ACE9512CDB82890F1B97 /* 📦 Embed Pods Frameworks */ = {
+		6E79ACE9512CDB82890F1B97 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +307,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAddressBookExample/Pods-SwiftAddressBookExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		811A2F4CF324EF923EB6CC2F /* 📦 Check Pods Manifest.lock */ = {
+		811A2F4CF324EF923EB6CC2F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,14 +322,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9761DDC48E0439939B842612 /* 📦 Copy Pods Resources */ = {
+		9761DDC48E0439939B842612 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,14 +337,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAddressBookExample/Pods-SwiftAddressBookExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE1033B9B16E497813370351 /* 📦 Check Pods Manifest.lock */ = {
+		CE1033B9B16E497813370351 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.socialbit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftAddressBookExample.app/SwiftAddressBookExample";
 			};
 			name = Debug;
@@ -432,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.socialbit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftAddressBookExample.app/SwiftAddressBookExample";
 			};
 			name = Release;
@@ -531,6 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftAddressBookExample/SwiftAddressBookExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -547,6 +552,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftAddressBookExample/SwiftAddressBookExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

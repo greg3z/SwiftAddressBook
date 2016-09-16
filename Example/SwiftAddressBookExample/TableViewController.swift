@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
 	var people : [SwiftAddressBookPerson]?
 	var names : [String?]? = []
 	var numbers : [Array<String?>?]? = []
-	var birthdates : [NSDate?]? = []
+	var birthdates : [Date?]? = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -101,7 +101,7 @@ class TableViewController: UITableViewController {
 		self.names = self.people?.map { (p) -> (String?) in
 			return p.compositeName
 		}
-		self.birthdates = self.people?.map { (p) -> (NSDate?) in
+		self.birthdates = self.people?.map { (p) -> (Date?) in
 			return p.birthday
 		}
 	}
@@ -113,11 +113,11 @@ class TableViewController: UITableViewController {
 
 	// MARK: - Table view data source
 
-	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	override func numberOfSections(in tableView: UITableView) -> Int {
 		return groups == nil ? 1 : groups!.count+1
 	}
 
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		if groups == nil || section == groups?.count {
 			return people == nil ? 0 : people!.count
 		}
@@ -132,15 +132,15 @@ class TableViewController: UITableViewController {
 	}
 
 
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-		let cell = tableView.dequeueReusableCellWithIdentifier("addressCell", forIndexPath: indexPath) as! AddressViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "addressCell", for: indexPath) as! AddressViewCell
 
 		if groups == nil || indexPath.section == groups?.count {
 			// Configure the cell...
 			cell.nameLabel.text = people![indexPath.row].compositeName
-			cell.birthdateLabel.text = birthdates![indexPath.row]?.description
-			cell.phoneNumberLabel.text = numbers![indexPath.row]?.first!
+			cell.birthdateLabel.text = birthdates![(indexPath as NSIndexPath).row]?.description
+			cell.phoneNumberLabel.text = numbers![(indexPath as NSIndexPath).row]?.first!
 		}
 		else {
 			let group = groups![indexPath.section]
@@ -152,7 +152,7 @@ class TableViewController: UITableViewController {
 		return cell
 	}
 
-	override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		if groups == nil || section == groups?.count {
 			return "All people"
 		}

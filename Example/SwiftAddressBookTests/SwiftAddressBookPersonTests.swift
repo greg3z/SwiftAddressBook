@@ -45,7 +45,7 @@ class SwiftAddressBookPersonTests: XCTestCase {
 			"Images must stay the same after setting and retrieving again")
 
 		/* test with differently oriented image */
-		let imageRotated = UIImage(CGImage: image.CGImage!, scale: 1.0, orientation: UIImageOrientation.DownMirrored)
+		let imageRotated = UIImage(cgImage: image.cgImage!, scale: 1.0, orientation: UIImageOrientation.downMirrored)
 		p.setImage(imageRotated)
 		XCTAssertTrue(UIImagePNGRepresentation(imageRotated)!.isEqual(UIImagePNGRepresentation(p.image!)!),
 			"Images must stay the same after setting and retrieving again")
@@ -343,18 +343,18 @@ class SwiftAddressBookPersonTests: XCTestCase {
 	//MARK: - Helper funtions
 
 	func getDateTimestamp() -> String {
-		let formatter = NSDateFormatter()
+		let formatter = DateFormatter()
 		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
-		return formatter.stringFromDate(NSDate())
+		return formatter.string(from: Date())
 	}
 
-	func getDate(year: Int,_ month: Int,_ day: Int,_ hour: Int) -> NSDate {
-		let components = NSDateComponents()
+	func getDate(_ year: Int,_ month: Int,_ day: Int,_ hour: Int) -> Date {
+		var components = DateComponents()
 		components.year = year
 		components.month = month
 		components.day = day
 		components.hour = hour
-		components.timeZone = NSTimeZone(name: "UTC")
-		return NSCalendar.currentCalendar().dateFromComponents(components)!
+		(components as NSDateComponents).timeZone = TimeZone(identifier: "UTC")
+		return Calendar.current.date(from: components)!
 	}
 }
